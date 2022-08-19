@@ -1,0 +1,115 @@
+header {
+    padding: 34px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #fff;
+    z-index: 1000;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    box-shadow: rgb(56 56 73 / 20%) 0 0 7px;
+    .custom-container {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        .logo {
+            img {
+                max-width: 146px;
+            }
+        }
+        .menu {
+            margin-left: 60px;
+            ul {
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                li {
+                    &:not(:first-child) {
+                        margin-left: 20px;
+                    }
+                    a {
+                        padding: 0 12px;
+                    }
+                }
+            }
+            .mobile-buttons {
+                display: none;
+            }
+        }
+        .buttons {
+            margin-left: auto;
+            .contact-us-button {
+                font-size: 14px;
+                font-weight: 500;
+            }
+            .hamburger {
+                display: none;
+            }
+        }
+    }
+}
+@media (max-width: 768px) {
+    header {
+        padding: 16px 10px;
+        overflow: visible;
+        z-index: 103;
+        .custom-container {
+            .logo {
+                img {
+                    max-width: 146px;
+                }
+            }
+            .menu {
+                box-shadow: 0 8px 16px 0 rgb(0 0 0 / 20%);
+                transition: 0.2s;
+                position: absolute;
+                margin: 0;
+                top: 100px;
+                right: 0;
+                background: #ffffff;
+                z-index: 100;
+                border-radius: 8px;
+                height: 0;
+                overflow: hidden;
+                width: 200px;
+                ul {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: flex-start;
+                    margin-top: 20px;
+                    width: 100%;
+                    li {
+                        margin-top: 20px;
+                        width: 100%;
+                        &:not(:first-child) {
+                            margin-left: 0;
+                        }
+                        a {
+                            padding: 0 12px;
+                        }
+                    }
+                }
+            }
+            .menu.show {
+                top: 100px;
+                height: 190px;
+                padding: 0 20px 20px;
+            }
+            .buttons {
+                margin-left: auto;
+                .contact-us-button {
+                    display: none;
+                }
+                .hamburger {
+                    display: block;
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}

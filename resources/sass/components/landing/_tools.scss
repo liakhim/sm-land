@@ -1,0 +1,89 @@
+.tools-section {
+    margin-top: -50px;
+    z-index: 2;
+    position: relative;
+    .custom-container {
+        .tools {
+            background: #ffffff;
+            padding: 32px 40px;
+            display: flex;
+            align-items: center;
+            border: 1px solid #E2E2E2;
+            box-shadow: 0 8px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            width: 100%;
+            overflow: hidden;
+            &-text {
+                display: flex;
+                align-items: center;
+                width: 240px;
+                border-right: 1px solid #E8E8E8;
+                p {
+                    margin: 0;
+                    font-size: 16px;
+                    line-height: 22px;
+                    padding: 5px 0;
+                    font-weight: 500;
+                    color: #0C0C0D;
+                }
+            }
+            &-icons {
+                padding: 0 0 0 16px;
+                width: calc(100% - 240px);
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                &-block {
+                    padding: 0 10px;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 1366px) {
+    .tools-section {
+        .custom-container {
+            .tools {
+                flex-direction: column;
+                padding: 20px 10px;
+                &-text {
+                    width: 100%;
+                    border-right: 0;
+                    padding: 0 10px;
+                    p {}
+                }
+                &-icons {
+                    width: 100%;
+                    margin: 0;
+                    padding: 0;
+                    justify-content: space-between;
+                    &-block {}
+                }
+            }
+        }
+    }
+}
+@media (max-width: 768px) {
+    .tools-section {
+        margin-top: -20px;
+        .custom-container {
+            .tools {
+                flex-direction: column;
+                &-text {
+                    width: 100%;
+                    p {}
+                }
+                &-icons {
+                    width: 100%;
+                    margin: 0;
+                    padding: 0;
+                    flex-wrap: wrap;
+                    justify-content: flex-start;
+                    &-block {
+                        margin-top: 20px;
+                    }
+                }
+            }
+        }
+    }
+}

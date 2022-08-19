@@ -1,0 +1,143 @@
+.about-title-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+  padding: 50px 0;
+  h2 {
+    text-align: center;
+  }
+  p {
+    margin-top: 20px;
+    text-align: center;
+  }
+}
+.about-blocks {
+  .custom-container {
+    .about-block {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 30px;
+      gap: 30px;
+      height: 450px;
+      &-text {
+        padding: 100px;
+        width: 50%;
+        background: #F9F9F9;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        border-radius: 16px;
+        .title {
+          h3 {
+            font-weight: 600;
+            font-size: 34px;
+            line-height: 42px;
+          }
+        }
+        .text {
+          margin-top: 30px;
+        }
+      }
+      &-image {
+        background: #F9F9F9;
+        width: 50%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 16px;
+        img {
+          width: 400px;
+        }
+      }
+    }
+    .about-block.desktop-reverse {
+      flex-direction: row-reverse;
+    }
+    .about-block.gray-back {
+      background: #F9F9F9;
+    }
+  }
+}
+@media (max-width: 1366px) {
+  .about-blocks {
+    .custom-container {
+      .about-block {
+        &-text {
+          padding: 30px;
+          align-items: center;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 991px) {
+  .about-blocks {
+    .custom-container {
+      .about-block {
+        flex-direction: column;
+        height: auto;
+        background: #F9F9F9;
+        gap: 0;
+        &-text {
+          width: 100%;
+          padding: 20px;
+          .title {
+            h3 {
+              text-align: center;
+            }
+          }
+          .text {
+            p {
+              text-align: center;
+            }
+          }
+        }
+      }
+      .about-block.desktop-reverse {
+        flex-direction: column;
+      }
+    }
+  }
+}
+@media (max-width: 690px) {
+  .about-title-block {
+    padding: 0 20px;
+    h2 {
+      text-align: center;
+    }
+    p {
+      margin-top: 20px;
+      text-align: center;
+    }
+  }
+  .about-blocks {
+    .custom-container {
+      .about-block {
+        flex-direction: column;
+        height: auto;
+        background: #F9F9F9;
+        &-text {
+          width: 100%;
+          padding: 20px;
+          p {
+            margin: 0;
+          }
+        }
+        &-image {
+          width: 100%;
+          padding: 20px 30px;
+          img {
+            width: 100%;
+            max-width: 300px;
+          }
+        }
+      }
+    }
+  }
+}

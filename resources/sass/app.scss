@@ -1,0 +1,109 @@
+@import "../../node_modules/bootstrap/scss/bootstrap-reboot";
+@import "./components/landing/header";
+@import "./components/landing/burger";
+@import "./components/landing/promo";
+@import "./components/landing/features";
+@import "./components/landing/about-blocks";
+@import "./components/landing/tools";
+@import "./components/landing/slider";
+@import "./components/landing/form-section";
+@import "./components/landing/footer";
+#app {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+}
+* {
+    font-family: 'Inter', sans-serif;
+    color: #0C0C0D;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+.only-mobile {
+    display: none;
+    @media (max-width: 768px) {
+        display: flex;
+    }
+}
+.custom-link {
+    text-decoration: none;
+    color: #525252;
+    &:hover {
+        color: #80bdff;
+    }
+}
+ul {
+    margin: 0;
+    padding: 0;
+    li {
+        list-style-type: none;
+    }
+}
+.custom-button {
+    border-radius: 8px;
+    border: none;
+    padding: 10px 20px;
+    outline: none;
+    transition: 0.4s;
+    background: transparent;
+    span {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+    }
+    &:disabled {
+        opacity: 0.7;
+        cursor: not-allowed;
+    }
+}
+.custom-button.yellow {
+    background: #FCD733;
+    &:hover {
+        box-shadow: 0 0 10px #FCD73350;
+    }
+}
+.custom-outline-button {
+    text-decoration: none;
+    background: transparent;
+}
+.violet {
+    border: 1px solid #4F51CD;
+    color: #4F51CD;
+    & > * {
+        color: #4F51CD;
+    }
+}
+.custom-input {
+    background: #FFFFFF;
+    border: 1px solid #CED4DA;
+    border-radius: 8px;
+    outline: none;
+    padding: 14px 12px;
+    font-size: 13px;
+    line-height: 16px;
+    &:active {
+        border: 1px solid #80bdff;
+    }
+    &:focus {
+        border: 1px solid #80bdff;
+    }
+}
+.custom-input.error {
+    border: 1px solid #dc3545;
+}
+.custom-container {
+    max-width: 1320px;
+    margin: auto;
+    @media (max-width: 1366px) {
+        padding: 0 20px;
+        width: 100%;
+    }
+    @media (max-width: 768px) {
+        padding: 0 10px;
+        width: 100%;
+    }
+}
