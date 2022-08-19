@@ -203,62 +203,65 @@
             </div>
         </div>
     </div>
-    <div id="contact-us" class="form-section">
-        <div class="custom-container">
-            <div class="form-overlay">
-                <div class="form-overlay-block">
-                    <div class="title">
-                        <h3>Connect with us</h3>
-                    </div>
-                    <div class="text">
-                        <p>Hungary, 1085 Budapest, József krt 69. fszt 1.</p>
-                        <a href="mailto:support@smartdatatech.io" class="custom-link">support@smartdatatech.io</a>
-                    </div>
-                </div>
-            </div>
-            <div class="form">
-                <div class="form-title">
-                    <h4>Send us a message</h4>
-                </div>
-                <div class="form-row">
-                    <label>
-                        <input v-model="name"
-                               class="custom-input"
-                               :class="{'error': showErrors && getError('name')}"
-                               placeholder="First name"
-                               type="text">
-                        <span v-if="showErrors" class="error-text">{{getError('name')}}</span>
-                    </label>
-                </div>
-                <div class="form-row">
-                    <label>
-                        <input v-model="email"
-                               class="custom-input"
-                               :class="{'error': showErrors && getError('email')}"
-                               placeholder="Email"
-                               type="email">
-                        <span v-if="showErrors" class="error-text">{{getError('email')}}</span>
-                    </label>
-                </div>
-                <div class="form-row">
-                    <label>
-                                <textarea v-model="message"
-                                          class="custom-input"
-                                          :class="{'error': showErrors && getError('message')}"
-                                          placeholder="Message"
-                                          name="comment"
-                                          id="comment"
-                                          cols="30"
-                                          rows="10"></textarea>
-                        <span v-if="showErrors" class="error-text">{{getError('message')}}</span>
-                    </label>
-                </div>
-                <div class="form-button">
-                    <button @click="sendForm()" :disabled="showErrors && disableButton" class="custom-button yellow">
-                        <span>Send message</span>
-                    </button>
-                </div>
-            </div>
-        </div>
+    <div style="border: 1px solid red;">
+        <example-component></example-component>
     </div>
+{{--    <div id="contact-us" class="form-section">--}}
+{{--        <div class="custom-container">--}}
+{{--            <div class="form-overlay">--}}
+{{--                <div class="form-overlay-block">--}}
+{{--                    <div class="title">--}}
+{{--                        <h3>Connect with us</h3>--}}
+{{--                    </div>--}}
+{{--                    <div class="text">--}}
+{{--                        <p>Hungary, 1085 Budapest, József krt 69. fszt 1.</p>--}}
+{{--                        <a href="mailto:support@smartdatatech.io" class="custom-link">support@smartdatatech.io</a>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--            <div class="form">--}}
+{{--                <div class="form-title">--}}
+{{--                    <h4>Send us a message</h4>--}}
+{{--                </div>--}}
+{{--                <div class="form-row">--}}
+{{--                    <label>--}}
+{{--                        <input v-model="name"--}}
+{{--                               class="custom-input"--}}
+{{--                               :class="{'error': showErrors && getError('name')}"--}}
+{{--                               placeholder="First name"--}}
+{{--                               type="text">--}}
+{{--                        <span v-if="showErrors" class="error-text">{{getError('name')}}</span>--}}
+{{--                    </label>--}}
+{{--                </div>--}}
+{{--                <div class="form-row">--}}
+{{--                    <label>--}}
+{{--                        <input v-model="email"--}}
+{{--                               class="custom-input"--}}
+{{--                               :class="{'error': showErrors && getError('email')}"--}}
+{{--                               placeholder="Email"--}}
+{{--                               type="email">--}}
+{{--                        <span v-if="showErrors" class="error-text">{{getError('email')}}</span>--}}
+{{--                    </label>--}}
+{{--                </div>--}}
+{{--                <div class="form-row">--}}
+{{--                    <label>--}}
+{{--                                <textarea v-model="message"--}}
+{{--                                          class="custom-input"--}}
+{{--                                          :class="{'error': showErrors && getError('message')}"--}}
+{{--                                          placeholder="Message"--}}
+{{--                                          name="comment"--}}
+{{--                                          id="comment"--}}
+{{--                                          cols="30"--}}
+{{--                                          rows="10"></textarea>--}}
+{{--                        <span v-if="showErrors" class="error-text">{{getError('message')}}</span>--}}
+{{--                    </label>--}}
+{{--                </div>--}}
+{{--                <div class="form-button">--}}
+{{--                    <button @click="sendForm()" :disabled="showErrors && disableButton" class="custom-button yellow">--}}
+{{--                        <span>Send message</span>--}}
+{{--                    </button>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--        </div>--}}
+{{--    </div>--}}
 @endsection
