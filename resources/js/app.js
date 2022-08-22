@@ -19,7 +19,9 @@ window.Vue = require('vue');
 // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
-Vue.component('example-component', require('./components/ExampleComponent.vue').default);
+Vue.component('landing-header', require('./components/LandingHeader.vue').default);
+Vue.component('contact-us', require('./components/ContactUs.vue').default);
+Vue.component('landing-footer', require('./components/LandingFooter.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -29,4 +31,42 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
 
 const app = new Vue({
     el: '#app',
+    data: {
+        test: '1er23edqwdqw'
+    }
+});
+let typed = new Typed(".typed", {
+    strings: ["Marketing Digital Software Development", "Development Digital Marketing Software", "Development Digital Marketing Software"],
+    typeSpeed: 50,
+    backSpeed: 50,
+    backDelay: 800,
+    startDelay: 500,
+    loop: true,
+    showCursor: false,
+});
+let swiper = new Swiper(".mySwiper", {
+    slidesPerView: "auto",
+    spaceBetween: 30,
+    loop: true,
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+});
+document.querySelectorAll('a[href*="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        const blockID = anchor.getAttribute('href').substr(1);
+        if(document.getElementById(blockID)) {
+            e.preventDefault();
+
+            document.getElementById(blockID).scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    });
 });
