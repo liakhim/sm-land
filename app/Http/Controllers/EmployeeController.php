@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Employee;
 use App\Helpers\Notifications\TelegramNotification;
 use App\Http\Requests\EmployeeRequest;
+use App\Validators\EmployeeValidator;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
@@ -28,12 +29,13 @@ class EmployeeController extends Controller
      *
      * @return Response
      */
-    public function create(EmployeeRequest $request, $id): JsonResponse
+    public function create(Request $request, $id): JsonResponse
     {
-//        DB::transaction(function () use ($employee) {
+//        DB::transaction(function () use ($request) {
 //
 //        });
-        return response()->json(['data' => $request->all()]);
+        $validator = EmployeeValidator::make_validator($request->all());
+        return response()->json(['data' => $validator->errors()]);
     }
 
     /**
