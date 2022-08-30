@@ -18,7 +18,6 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
-Route::get('/test', function (Request $request) {
-    $employee = Employee::find(1);
-    return response()->json(['data' => $employee->projects]);
-});
+Route::get('/employees', 'EmployeeController@index');
+Route::get('/employees/{id}', 'EmployeeController@show');
+Route::post('/employees/{id}', 'EmployeeController@create');

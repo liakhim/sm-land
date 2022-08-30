@@ -18,11 +18,11 @@ class CreateEmployeesTable extends Migration
             $table->string('name');
             $table->string('email');
             $table->string('password');
-            $table->string('position');
-            $table->json('avatars');
-            $table->json('contacts');
-            $table->json('skills');
-            $table->rememberToken();
+            $table->string('position')->nullable();
+            $table->json('avatars')->nullable();
+            $table->json('contacts')->nullable();
+            $table->json('skills')->nullable();
+            $table->rememberToken()->nullable();
             $table->timestamps();
         });
     }
