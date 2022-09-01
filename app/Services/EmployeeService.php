@@ -2,7 +2,7 @@
 
 namespace App\Services;
 
-class SendFeedbackService
+class SendFeedbackService implements ServiceInterface
 {
     private $params;
 

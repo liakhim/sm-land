@@ -18,6 +18,9 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
-Route::get('/employees', 'EmployeeController@index');
-Route::get('/employees/{id}', 'EmployeeController@show');
-Route::post('/employees/{id}', 'EmployeeController@create');
+Route::group(['prefix' => 'employees'], function () {
+    Route::post('', 'EmployeeController@create');
+    Route::get('', 'EmployeeController@index');
+    Route::get('{id}', 'EmployeeController@show');
+    Route::patch('{id}', 'EmployeeController@update');
+});
