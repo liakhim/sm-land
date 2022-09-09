@@ -52,7 +52,7 @@ class EmployeeController extends Controller
         $new_employee = DB::transaction(function () use ($employee) {
             return $employee->createEmployee();
         });
-        return response()->json(['data' => $new_employee]);
+        return response()->json(['data' => $new_employee], 201);
     }
 
     /**

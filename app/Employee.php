@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Employee extends Model
 {
     protected $table = 'employees';
-    protected $fillable = ['id', 'name', 'email'];
+    protected $fillable = ['id', 'name', 'email', 'password'];
     protected $hidden = ['password'];
 
     public function projects()
